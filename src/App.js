@@ -5,15 +5,23 @@ import ToDoForm from './TodoForm';
 function App() {
   const [todos, setTodos] = useState([])
 
-  const addTask = () => {
+  const addTask = (userInput) => {
+    if(userInput){
+      const newItem = {
+        id: Math.random().toString(36).substring(2, 9),
+        task: userInput,
+        complete: false
+      }
+      setTodos([...todos, newItem])
+    }
 
   }
-  const removeTask = () => {
-    
+  const removeTask = (id) => {
+    setTodos([...todos.filter((todo)=> todo.id !== id)])
   }
 
-  const handleToggle = () => {
-    
+  const handleToggle = (id) => {
+    setTodos([...todos.Map((todo)=> todo.id === id ? {...todo, complete: !todo.complete}: {...todo})])
   }
   return (
     <div className="App">

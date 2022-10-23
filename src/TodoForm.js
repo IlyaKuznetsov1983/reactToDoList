@@ -1,20 +1,26 @@
 import {useState} from 'react'
 
-function ToDoForm() {
+function ToDoForm({ addTask }) {
     const [userInput, setUserInput] = useState ('')
 
   
 
-    const handleChange = () =>{
-
+    const handleChange = (e) =>{
+        setUserInput(e.currentTarget.value)
     }
 
-    const handleSubmit = () =>{
-
+    const handleSubmit = (e) =>{
+      e.preventDefault()
+      addTask(userInput)
+      setUserInput("")
     }
     
-    const handleKeyPress = () =>{
+    const handleKeyPress = (e) =>{
+          if(e.key === "Enter") {
+            handleSubmit(e) 
 
+            
+          }
     }
 
     return (
@@ -26,7 +32,9 @@ function ToDoForm() {
        onKeyDown={handleKeyPress}
        placeholder="type to search"
        />
-
+     <button>All</button>
+     <button>Active</button>
+     <button>Done</button>
 
     </form>)
 }
