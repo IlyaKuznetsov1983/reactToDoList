@@ -36,6 +36,8 @@ function ToDoForm({ addTask }) {
      <button>Active</button>
      <button>Done</button>
 
+     
+
     </form>)
 }
 

@@ -10,8 +10,8 @@
   margin-top: 15px;
   background: linear-gradient(
     90deg,
-    rgba(43, 197, 189, 0.473) 0%,
-    rgba(10, 85, 75, 0.418) 100%
+    rgba(43, 197, 189, 0.247) 0%,
+    rgba(10, 85, 75, 0.247) 100%
   );
   color: rgb(9, 18, 68);
   border: none;
@@ -40,10 +40,10 @@
   outline: none;
   background: linear-gradient(
     90deg,
-    rgba(5, 117, 102, 0.781) 0%,
-    rgba(68, 148, 111, 0.5) 100%
+    rgba(119, 167, 160, 0.527) 0%,
+    rgba(143, 185, 165, 0.384) 100%
   );
-  color: rgb(233, 236, 213);
+  color: rgb(62, 60, 73);
   text-transform: capitalize;
 }
 
